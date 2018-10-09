@@ -1,0 +1,2 @@
+# ansible_role_prometheus_node_exporter_config
+ansible role to configure prometheus's node_exporter
