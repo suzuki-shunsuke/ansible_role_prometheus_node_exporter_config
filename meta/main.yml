@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: prometheus_node_exporter_config
   author: Suzuki Shunsuke
   description: ansible role to configure prometheus's node_exporter
   license: MIT
