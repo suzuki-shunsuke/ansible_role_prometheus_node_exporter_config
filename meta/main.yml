@@ -1,0 +1,15 @@
+---
+galaxy_info:
+  author: Suzuki Shunsuke
+  description: ansible role to configure prometheus's node_exporter
+  license: MIT
+  min_ansible_version: 2.6
+  github_branch: master
+  platforms:
+  - name: EL
+    versions:
+    - 7
+  galaxy_tags:
+  - prometheus
+  - node_exporter
+dependencies: []

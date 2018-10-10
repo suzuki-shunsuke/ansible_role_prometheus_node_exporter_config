@@ -1,0 +1,12 @@
+[Unit]
+Description=node_exporter
+After=network.target
+
+[Service]
+Type=simple
+
+PIDFile={{ prometheus_node_exporter_pid_path }}
+User={{ prometheus_node_exporter_user }}
+Group={{ prometheus_node_exporter_group }}
+
+ExecStart={{ prometheus_node_exporter_bin_path }}{% if prometheus_node_exporter_opts is defined %} {{ prometheus_node_exporter_opts }}{% endif %}
