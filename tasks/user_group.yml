@@ -1,0 +1,12 @@
+# create user and group
+- name: create Prometheus group
+  group: name={{ prometheus_node_exporter_group }}  state=present
+
+- name: create Prometheus user
+  user:
+    name: "{{ prometheus_node_exporter_user }}"
+    group: "{{ prometheus_node_exporter_group }}"
+    createhome: no
+    shell: /sbin/nologin
+    comment: "Prometheus User"
+    state: present

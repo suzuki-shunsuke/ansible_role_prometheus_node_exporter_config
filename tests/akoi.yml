@@ -1,0 +1,18 @@
+---
+# akoi - binary version control system
+# https://github.com/suzuki-shunsuke/akoi
+bin_path: /usr/local/bin/{{.Name}}-{{.Version}}
+link_path: /usr/local/bin/{{.Name}}
+packages:
+  node_exporter:
+    url: https://github.com/prometheus/node_exporter/releases/download/v{{.Version}}/node_exporter-{{.Version}}.linux-amd64.tar.gz
+    version: 0.16.0
+    files:
+    - name: node_exporter
+      archive: node_exporter-{{.Version}}.linux-amd64/node_exporter
+  akoi:
+    url: https://github.com/suzuki-shunsuke/{{.Name}}/releases/download/v{{.Version}}/{{.Name}}_{{.Version}}_linux_amd64.tar.gz
+    version: 1.3.0
+    files:
+    - name: akoi
+      archive: akoi

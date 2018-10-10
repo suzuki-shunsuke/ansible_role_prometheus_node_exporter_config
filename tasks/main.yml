@@ -1,0 +1,16 @@
+---
+- name: create user and group
+  import_tasks: user_group.yml
+- name: mkdir for general cases
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: "{{ prometheus_node_exporter_user }}"
+    group: "{{ prometheus_node_exporter_group }}"
+    mode: "u=rwx,g=rx,o="
+  with_items:
+  - "{{ prometheus_node_exporter_pid_path|dirname }}"
+- name: copy systemd config to server
+  template:
+    src: node_exporter.service.j2
+    dest: /lib/systemd/system/node_exporter.service
