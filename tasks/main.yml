@@ -14,3 +14,4 @@
   template:
     src: node_exporter.service.j2
     dest: /lib/systemd/system/node_exporter.service
+  when: prometheus_node_exporter_use_systemd

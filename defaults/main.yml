@@ -3,3 +3,4 @@ prometheus_node_exporter_user: prometheus
 prometheus_node_exporter_group: prometheus
 prometheus_node_exporter_bin_path: /usr/local/bin/node_exporter
 prometheus_node_exporter_pid_path: /var/run/node_exporter/node_exporter.pid
+prometheus_node_exporter_use_systemd: yes

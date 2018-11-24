@@ -24,7 +24,7 @@ packages:
 
 ## Requirements
 
-* systemd
+Nothing.
 
 ## Role Variables
 
